@@ -1,0 +1,1 @@
+`timescale 1 ns / 1 ns module I4NrCsM46z8lM4AKxFof9D (uzVAOI2F2fCyP1X6ddnzt, AbraIM0JR0BvNVwdfH2C5E, p1CDL2zw8eCgTUZy4fC9x); input signed [11:0] uzVAOI2F2fCyP1X6ddnzt; input signed [11:0] AbraIM0JR0BvNVwdfH2C5E; output signed [11:0] p1CDL2zw8eCgTUZy4fC9x; wire ZkXpAzQ9GtuF9udNmIvB5C; assign p1CDL2zw8eCgTUZy4fC9x = AbraIM0JR0BvNVwdfH2C5E; endmodule

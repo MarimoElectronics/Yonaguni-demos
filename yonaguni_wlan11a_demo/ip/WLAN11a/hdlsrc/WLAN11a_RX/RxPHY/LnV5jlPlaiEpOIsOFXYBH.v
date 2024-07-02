@@ -1,0 +1,1 @@
+`timescale 1 ns / 1 ns module LnV5jlPlaiEpOIsOFXYBH (EEY54gnzqLw4nuCLD0j9uD, X4rnQurnZzcY7EwvlcOQ0B); input signed [11:0] EEY54gnzqLw4nuCLD0j9uD; output signed [11:0] X4rnQurnZzcY7EwvlcOQ0B; wire MZfBsl5J53tr7n4zjXLV6E; assign X4rnQurnZzcY7EwvlcOQ0B = EEY54gnzqLw4nuCLD0j9uD; endmodule
