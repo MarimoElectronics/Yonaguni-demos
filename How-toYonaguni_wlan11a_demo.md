@@ -19,7 +19,7 @@ Clone Yonaguni-demo and Yonaguni-FPGA. Then copy the Yonaguni-FPGA/hdl directory
 ```Shell
 $ git clone https://github.com/MarimoElectronics/Yonaguni-demo.git
 $ git clone https://github.com/MarimoElectronics/Yonaguni-FPGA.git
-$ cp -r ./Yonaguni-FPGA/hdl ./Yonaguni-demo/yonaguni_wlan11a_demo/ip/
+$ cp -r ./Yonaguni-FPGA/hdl ./Yonaguni-demos/yonaguni_wlan11a_demo/ip/
 ```
 
 Build the demonstration design using Quartus Prime.
@@ -28,7 +28,7 @@ Build the demonstration design using Quartus Prime.
   - On Quartus, launch "Platform Designer" and select "system_bd.qsys".
   - In Platform Designer, run "Generate > Generate HDL...".
   - Run "Start Compilation" on Quartus.
-  - Write "yonaguni_lvss.rbf", which is created in the "output_files" folder, to the BOOT partition of the SD card.
+  - Write "yonaguni_lvds.rbf", which is created in the "output_files" folder, to the BOOT partition of the SD card.
   - Change the file name to "yonaguni_cmos.rbf".
 
 
@@ -40,7 +40,7 @@ Connect the RF-SoM to the PC.
 
 Set the PC's IP address to 192.168.1.229. (If necessary, turn off the firewall on your PC.)
 
-Power on the RF-SoM and set the IP address of the RF-SoM from USB UART Terminal. (If necessary, turn off DHCP on the RF-SoM.)
+Power on the RF-SoM and set the IP address of the RF-SoM from USB UART Terminal. (If necessary, turn off dhcpcd on the RF-SoM.)
 ```Shell
 root@analog:~ $ ifconfig eth0 192.168.1.228
 ```
