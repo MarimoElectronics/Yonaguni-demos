@@ -50,6 +50,7 @@ Next, build the demonstration design using Quartus Prime:
   - In Platform Designer, run "Generate > Generate HDL...".
   - Run "Start Compilation" in Quartus.
   - Write the "yonaguni_lvds.rbf" file, created in the "output_files" folder, to the BOOT partition of the SD card.
+  - Change the file name to "yonaguni_cmos.rbf".
 
 
 ## 4. Hardware Setup
@@ -74,7 +75,7 @@ Log in to the RF-SoM via SSH. The default login password is "analog".
 
 Create a directory named yonaguni_wlan11a_demo under /home/analog.
 
-Copy the SW directory from the cloned Yonaguni-demo/yonaguni_wlan11a_demo to the yonaguni_wlan11a_demo directory on the RF-SoM.
+Copy the SW directory from the cloned Yonaguni-demos/yonaguni_wlan11a_demo to the yonaguni_wlan11a_demo directory on the RF-SoM.
 
 Navigate to yonaguni_wlan11a_demo/SW/01_TRX and run make to generate the TEST_PRG.
 ```Shell
@@ -82,13 +83,16 @@ analog@analog:~/yoneguni_wlan11a_demo/SW/01_TRX $ make
 gcc -c main.c -Wall
 gcc main.o  -Wall -o TEST_PRG
 analog@analog:~/yoneguni_wlan11a_demo/SW/01_TRX $
+cd ~
+analog@analog:~ $
 ```
 
 
 ## 6. Running the Demonstration
-Run the startup script using the USB UART Terminal.
+Run the startup script via SSH. The login password is "analog".
 ```Shell
-root@analog:~ $ sh /home/analog/yonaguni_wlan11a_demo/SW/wlan11a_startup.sh
+analog@analog:~ $ sudo sh /home/analog/yonaguni_wlan11a_demo/SW/wlan11a_startup.sh
+[sudo] password for analog:
 ----------------------------------------------------------------------
 ------ WLAN11a transmit and receive program. ------
 INFO-> Setup FPGA interface... finished.
@@ -106,6 +110,7 @@ The PC will wait for UDP packets received and demodulated via IEEE802.11a.
 Then, run UDP_send.py.
 
 When IEEE802.11a transmission occurs, USER_LED[0] on the RF-SoM lights up blue, and when reception occurs, USER_LED[1] lights up blue.
+The following is an example run on Windows PowerShell.
 ```Shell
 c:\work\yonaguni_wlan11a_demo\Python> .\UDP_receive.py
 c:\work\yonaguni_wlan11a_demo\Python> .\UDP_send.py
@@ -118,7 +123,8 @@ hello RF-SOM1
 hello RF-SOM2
 ```
 
-Press ^C on the USB UART Terminal to end the script.
+Press ^C via SSH to end the wlan11a_startup.sh script.
+Close the Windows PowerShell.
 
 
 ## 7. Conclusion
