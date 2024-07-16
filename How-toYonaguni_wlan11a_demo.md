@@ -1,8 +1,8 @@
 # How-to: Wireless LAN IEEE802.11a Demonstration
 
 - [How-to: Wireless LAN IEEE802.11a Demonstration](#how-to-wireless-lan-ieee80211a-demonstration)
-  - [1. Prerequisites](#1-prerequisites)
-  - [2. Overview of this Demonstration](#2-overview-of-this-demonstration)
+  - [1. Overview of this Demonstration](#1-overview-of-this-demonstration)
+  - [2. Prerequisites](#2-prerequisites)
   - [3. Building the Demonstration Design](#3-building-the-demonstration-design)
   - [4. Hardware Setup](#4-hardware-setup)
   - [5. Software Setup](#5-software-setup)
@@ -10,7 +10,16 @@
   - [7. Conclusion](#7-conclusion)
 
 
-## 1. Prerequisites
+## 1. Overview of this Demonstration
+In this demonstration, we use the ADRV9002 RF-SoM to transmit and receive IEEE802.11a signals.
+The UDP packets are modulated by the IEEE802.11a PHY implemented in the RF-SoM's SoC and sent via Wireless LAN radio waves.
+They are then received back, demodulated by the IEEE802.11a PHY, and converted back into UDP packets.
+This demo transmits and receives only three lines of text via radio signals.
+
+![Demo Picture1](./img/wlan11a_demo_image.png)
+
+
+## 2. Prerequisites
   - 1× ADRV9002 RF-SoM
     - 1× USB A-microB cable for USB UART terminal
     - 1× USB OTG adapter
@@ -23,15 +32,6 @@
     - 1× USB-A port for UART terminal
     - 1× SD card writer
   - Quartus Prime Lite Edition 20.1.1
-
-
-## 2. Overview of this Demonstration
-In this demonstration, we use the ADRV9002 RF-SoM to transmit and receive IEEE802.11a signals.
-The UDP packets are modulated by the IEEE802.11a PHY implemented in the RF-SoM's SoC and sent via Wireless LAN radio waves.
-They are then received back, demodulated by the IEEE802.11a PHY, and converted back into UDP packets.
-This demo transmits and receives only three lines of text via radio signals.
-
-![Demo Picture1](./img/wlan11a_demo_image.png)
 
 
 ## 3. Building the Demonstration Design
