@@ -109,12 +109,12 @@ The PC will wait for UDP packets received and demodulated via IEEE802.11a.
 
 Then, run UDP_send.py.
 
-When IEEE802.11a transmission occurs, USER_LED[0] on the RF-SoM lights up blue, and when reception occurs, USER_LED[1] lights up blue.
 The following is an example run on Windows PowerShell.
 ```Shell
 c:\work\yonaguni_wlan11a_demo\Python> .\UDP_receive.py
 c:\work\yonaguni_wlan11a_demo\Python> .\UDP_send.py
 ```
+When IEEE802.11a transmission occurs, USER_LED[0] on the RF-SoM lights up blue, and when reception occurs, USER_LED[1] lights up blue.
 
 The received text will look like this:
 ```Shell
@@ -124,6 +124,7 @@ hello RF-SOM2
 ```
 
 Press ^C via SSH to end the wlan11a_startup.sh script.
+
 Close the Windows PowerShell.
 
 
